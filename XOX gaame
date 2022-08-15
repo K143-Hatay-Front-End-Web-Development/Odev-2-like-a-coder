@@ -1,0 +1,91 @@
+src/components/UI/GameContainer.js
+
+import React, { useEffect, useState } from 'react';
+import CheckMatch from '../utils/CheckMatch';
+	import GameFooter from './GameFooter';
+	import React {Uid} from 'react_uid';
+	import'./index.css';
+	import App from './App;
+	import * as serviceWorker from ' ./serveiceWorker';
+	/*değişkenleri billetme*/
+
+	const XOX=()=>{
+	const [turn,setTurn]=useState('X');
+
+	const[winner,settWinner]=useState();
+
+	const[cell,setCells]=useState(Array(9).fill(''));
+
+			const cell({num})0>{
+			return <td onClick= {()=>handleClick(num)}>{cell[num]}</td>;
+				};return(
+		<div className='container'>
+			<table>
+			Turn:{turn}
+			<tbody>
+			<tr>
+			<cell nım={0}/>
+			<cell nım={1}/>
+			<cell nım={2}/>
+			</tr>
+			<tr>
+			<cell nım={3}/>
+			<cell nım={4}/>
+			<cell nım={5}/>
+			</tr>
+			<tr>	
+			<cell nım={6}/>
+			<cell nım={7}/>
+			<cell nım={8}/>
+			</tr>
+			</tbody>
+			</table>
+			{winner &&(
+			<>
+			<p>{winner} isthe winner!</p>
+			<buttn onClick={()=>handelRestart()}>
+			</>
+								)}
+						</div>);
+								};
+	const checkForWinner=(squaers)=>{
+		
+	let combes = {
+	across:[
+	[0,1,2],[3,4,5],[6,7,8],],
+	down:[[0,3,6],[1,4,7],[2,5,8],],
+	diagnol:[0,4,8],[2,4,6],],};
+
+	for( let combos in combos){
+
+		combos[combo].forEach((patturn)=>{
+			if(
+		squares[patturn[0]===''||
+		squares[patturn[1]===''||
+		squares[patturn[2]===''
+					)}else if(
+		squares[pattern][0]===squares[pattern[1]&& squares[pattern[1]===squuares[pattern[2]])
+			{setWinner(squarres[patterrn['X']]);
+			
+	const handleClick=[num]=>{
+	if(cell[num]!==''){
+	alert('already clicked');
+		return;
+			}
+		
+		letsquares=[...cells];
+		if(turn==='O'){
+		squares[num]='X';
+		setTurn('X');
+				}else{
+			squares[num]='O';
+				setTurn('X');
+					}
+			checkForWinner(squares);
+			setCells(squares);
+					};
+		cost handleRestart=()=>{
+			setWinner(null);
+			setCells(Array(9).fill('');
+						};
+		export default XOX;
