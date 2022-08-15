@@ -1,8 +1,8 @@
 # Odev-2
 
 ## Grup Üyeleri
-- [Ad] [Soyad]
-- [Ad] [Soyad]
+- Feda Abdullah
+- Buse Yıldız
 
 ## İçerik
 
